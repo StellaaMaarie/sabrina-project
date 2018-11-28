@@ -1,10 +1,13 @@
 {% extends '_layouts/detail.njk' %}
+{% set members = members[0] %}
 
 {% block info %}
-  <p>Left column content</p>
+  <img src= assets/img/members/{{ members.imagebw }} alt="Member image">
 {% endblock %}
 
 {% block story %}
-  <h2>Undead: Right column content</h2>
-  <p>Zombie ipsum brains reversus ab cerebellum viral inferno, thalamus nam rick mend grimes malum cerveau cerebro.</p>
+  <h1>{{ members.name }}</h1>
+  <h3>{{ members.instruments }}</h3>
+  <h4>Born on {{ members.birthdate}} in {{ members.birthplace }}</h4>
+  <p>{{ members.text | safe}}</p>
 {% endblock %}
