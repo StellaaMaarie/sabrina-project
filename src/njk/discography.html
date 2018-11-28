@@ -1,13 +1,22 @@
 {% extends '_layouts/detail.njk' %}
-{% set discography = discography %}
+{% set discography = discography [0] %}
 
-        {% for discography in discography %}
-<div class="card" style="width:200px">
-  <img class="card-img-top" src= assets/img/discs/{{ discography.image }} alt="Discography Image">
-  <div class="card-body">
-    <h4 class="card-title">{{ discography.name }}</h4>
-    <p class="card-text">{{ discography.year }}</p>
-  </div>
+{% for discography in discography %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+<div class="list-unstyled">
+  <li class="media">
+    <img class="discography" src= assets/img/discs{{ discography.image }} alt="discography image">
+    <div class="media-body">
+      <h5 class="discography-title">{{ discography.title }}</h5>
+      <h3 class="discography-year">{{ discography.year }}</h3>
+    </div>
+
         {% else %}
-          <li>This would display if the 'discography' collection were empty</li>
+          This would display if the 'discography' collection were empty.
         {% endfor %}
+</div>        
+</div>
+</div>
