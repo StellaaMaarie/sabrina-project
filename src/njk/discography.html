@@ -2,23 +2,26 @@
 
 {% block page_title %}Queen's Discography{% endblock %}
 
+
 {% block content%}
 <article class="container">
   <div class="row">
-<h1>Queen's Discography</h1>
-<article class="container">
+    <h1>Queen's Discography</h1>
+  </div>
+
   <div class="row">
-        <p>Sabrina</p>
-        <ul class="list-unstyled">
-  <li class="practice">
-    <img class="practice-image" src=assets/img/members/ {{ image }} alt="Album Cover">
+    {%for disc in discography%}
+  <div class="col-md-4">
+      <ul class="list-unstyled">
+        <li class="albums">
+    <img class="album-image" src=assets/img/discs/{{disc.image}} alt="Album Cover">
     <div class="media-body">
-      <h5 class="album-title">Album Title</h5>
-      <h3 class="album-year">Album Year</h3>
+      <h5 class="album-title">{{disc.title}}</h5>
+      <h3 class="album-year">{{disc.year}}</h3>
     </div>
   </li>
   </ul>
-
 </div>
+{%endfor%}
 </article>
 {% endblock %}
