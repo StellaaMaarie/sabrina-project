@@ -20,3 +20,18 @@
 
 // Import partials
 @import "nav";
+@import "base";
+@import "members";
+@import "detail";
+
+body {
+    background-color: rgb(165, 20, 20);
+    color: white;
+}
+
+.card {
+    background-color: rgb(49, 49, 49);
+}
+
+
+
