@@ -4,7 +4,7 @@
 {% set members = members[0] %}
 
 {% block info %}
-  <img src=assets/img/members/{{ members.imagebw }} alt="Member image" class="img-responsive">
+  <img src=assets/img/members/{{ members.imagebw }} alt="Member image" class="member-img-responsive">
 {% endblock %}
 
 {% block story %}
@@ -12,4 +12,5 @@
   <h3>{{ members.instruments }}</h3>
   <h4>Born on {{ members.birthdate}} in {{ members.birthplace }}</h4>
   <p>{{ members.text | safe}}</p>
+
 {% endblock %}
