@@ -25,18 +25,24 @@
 @import "detail";
 
 body {
-    background-color: rgb(165, 20, 20);
+    background-color: #ED472A;
     color: white;
     font-family: 'Goudy Bookletter 1911', serif;
-    text-align: justify;
 }
 
-.jumbotron {
+.jumbotron-fluid {
     padding-bottom: auto;
+    background-size: cover;
+   
+}
+.img-fluid {
+    width: 100%;
+    max-height: 500px;
 }
 
 .card {
     background-color: rgb(49, 49, 49);
+    
 }
 
 

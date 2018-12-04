@@ -1,15 +1,2 @@
 {% extends '_layouts/detail.njk' %}
-{% block page_title %}Queen | Brian May{% endblock %}
-
 {% set members = members[1] %}
-
-{% block info %}
-  <img src= assets/img/members/{{ members.imagebw }} alt="Member image" class="member-img-responsive">
-{% endblock %}
-
-{% block story %}
-  <h1>{{ members.name }}</h1>
-  <h3>{{ members.instruments }}</h3>
-  <h4>Born on {{ members.birthdate}} in {{ members.birthplace }}</h4>
-  <p>{{ members.text | safe}}</p>
-{% endblock %}
